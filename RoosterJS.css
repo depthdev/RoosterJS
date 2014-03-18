@@ -1,0 +1,161 @@
+/*
+ * Copyright 2014 by Intellectual Reserve, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Author:        Adam Carson
+ * Dependencies:  jquery.js (1.8.3+)
+ *
+ * Name: ROOSTERJS / ROOSTER.JS
+ * Description: Very simple lazy-loader of images, iframes and scripts.  Mobile friendly.
+ * Options: Change the delay between the checking of approaching lazy-loaded items; and change the distance a lazy-loaded item should be loaded from the bottom of the screen regardless of orientation change.
+ *
+ */
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+  background: #ffff00;
+  background: -moz-linear-gradient(left,  #ffff00 0%, #c12300 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffff00), color-stop(100%,#c12300));
+  background: -webkit-linear-gradient(left,  #ffff00 0%,#c12300 100%);
+  background: -o-linear-gradient(left,  #ffff00 0%,#c12300 100%);
+  background: -ms-linear-gradient(left,  #ffff00 0%,#c12300 100%);
+  background: linear-gradient(to right,  #ffff00 0%,#c12300 100%);
+}
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: 'Georgia', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0 8px #c12300;
+}
+
+a {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
+div {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+ol li ul {
+  margin-top: 1rem;
+}
+ol li ul li {
+  margin-top: 1rem;
+}
+ol li ul li ul,
+ol li ul li ul li textarea {
+  font-size: 0.75rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin: 5px 0;
+  padding: 15px;
+  border-radius: 15px;
+  background: #ff5500;
+  color: #fff;
+  font-family: 'Courier', sans-serif;
+}
+textarea.options,
+textarea.fallback {
+  background: #bb5500;
+}
+textarea.options {
+  height: 180px;
+}
+textarea.required {
+  height: 50px;
+}
+textarea.images {
+  height: 160px;
+}
+
+table {
+  border-collapse: collapse;
+}
+thead th {
+  background: #bb5500;
+}
+th, td {
+  padding: 8px;
+  border: 1px solid #fff;
+}
+td:nth-child(odd) {
+  background: #ff5500;
+}
+
+.tips-and-faq li {
+  margin: 16px auto;
+}
+
+h3 {
+  margin-top: 100px;
+}
+figure {
+  margin: 0 15px 0 0;
+}
+figure:first-of-type {
+  float: left;
+}
+figure:last-of-type {
+  float: right;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.github-wrapper {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.github {
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  display: block;
+  width: 250px;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  text-decoration: none;
+  background: #ff0;
+  box-shadow: 0 0 0 4px #ff0;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+  vertical-align: middle;
+  text-align: center;
+  transform: rotate(45deg);
+}
+.github:hover:before {
+  content: attr(href);
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  text-align: right;
+  transform: rotate(-45deg);
+}
