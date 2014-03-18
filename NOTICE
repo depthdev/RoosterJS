@@ -1,3 +1,8 @@
+---------------------------------------------------------------
+Author: Adam Carson
+Website: http://clearwavedesigns.com/code/plugins/
+---------------------------------------------------------------
+
 Copyright 2014 Intellectual Reserve, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +18,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ---------------------------------------------------------------
-Author: Adam Carson
-
 This script depends on the following third-party component:
 jQuery
 License: MIT License
